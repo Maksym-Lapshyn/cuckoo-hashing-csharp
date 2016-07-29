@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
@@ -155,14 +155,14 @@ namespace live_and_learn
             cuckoo.Add("che novogo?");
             cuckoo.Add("gde byl?");
             cuckoo.Add("che videl?");
-            cuckoo.Add("u menya toje?");
-            cuckoo.Add("nichego novogo?");
-            cuckoo.Add("vse puchkom?");
+            cuckoo.Add("abrakadabra");
+            cuckoo.Add("rabotaiiii");
+            cuckoo.Add("blin");
             cuckoo.Add("doge?");
             cuckoo.Add("mr cats?");
             cuckoo.Add("alloha?");
-            cuckoo.Add("dich?");
-            cuckoo.Add("bandos?");
+            cuckoo.Add("yoyo");
+            cuckoo.Add("bandos");
             cuckoo.Add("hello?");
             cuckoo.Add("world?");
             cuckoo.Add("c#?");
