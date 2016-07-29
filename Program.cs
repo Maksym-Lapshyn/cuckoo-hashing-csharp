@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
@@ -9,7 +9,6 @@ using System.Text.RegularExpressions;
 
 namespace live_and_learn
 {
-
     class Program
     {
         class CuckooTable<T> : IEnumerable<T>
@@ -48,6 +47,10 @@ namespace live_and_learn
                 return Math.Abs(value.GetHashCode() * (value.GetHashCode() + 19) % table.Length);
             }
 
+            private int GetThirdIndex(T value, int length)
+            {
+                return Math.Abs(value.GetHashCode() * (value.GetHashCode() + 19) % length);
+            }
             private KeyValuePair<int, T>[] Resize()
             {
                 KeyValuePair<int, T>[] newTable = new KeyValuePair<int, T>[table.Length * 2];
@@ -63,7 +66,7 @@ namespace live_and_learn
                 KeyValuePair<int, T> forComparison = new KeyValuePair<int, T>(value.GetHashCode(), value);
                 for (int i = table.Length; i >= 16; i /=  2)
                 {
-                    if (table[GetFirstIndex(value, i)].Equals(forComparison) || table[GetSecondIndex(value, i)].Equals(forComparison))
+                    if (table[GetFirstIndex(value, i)].Equals(forComparison) || table[GetSecondIndex(value, i)].Equals(forComparison) || table[GetThirdIndex(value, i)].Equals(forComparison))
                     {
                         return true;
                     }
